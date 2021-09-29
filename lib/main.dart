@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/utils/text.dart';
 import 'package:myapp/widgets/toprated.dart';
 import 'package:myapp/widgets/trending.dart';
+import 'package:myapp/widgets/tv.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
 void main() => runApp(new MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Home(),
-      debugShowCheckedModeBanner: false,
+      //debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.dark,
       primaryColor: Colors.purple),
     );
@@ -67,7 +68,8 @@ class _HomeState extends State<Home> {
       body: ListView(
         children: [
          Toprated(toprated:topratedmovies,),
-          TrendingMovies(trending:trendingmovies)
+          TrendingMovies(trending:trendingmovies),
+          TV(tv:tv),
         ],
 
 
