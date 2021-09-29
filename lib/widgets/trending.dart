@@ -18,7 +18,8 @@ const TrendingMovies({
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           modified_text(text:"Trending Movies",color: Colors.white,size: 20.0,),
-          Container(height: 270, 
+          SizedBox(height:10,),
+          Container(height: 270,
           child: ListView.builder(itemCount:trending.length ,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index){
@@ -38,7 +39,7 @@ const TrendingMovies({
                                 ))),
                           ),
                           Container(child: modified_text(text:trending[index]['title']!=null?
-                            trending[index]['title']:'Loading', size: 10.0, color: Colors.white,),)
+                            trending[index]['title']:'Loading...', size: 10.0, color: Colors.white,),)
                         ],
 
                       ),

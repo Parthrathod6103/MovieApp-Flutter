@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/utils/text.dart';
+import 'package:myapp/widgets/toprated.dart';
 import 'package:myapp/widgets/trending.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
@@ -59,12 +60,13 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.transparent,
         title: modified_text(text:'Movie App',color: Colors.white,size: 20.0,),
       ),
       body: ListView(
         children: [
+         Toprated(toprated:topratedmovies,),
           TrendingMovies(trending:trendingmovies)
         ],
 
